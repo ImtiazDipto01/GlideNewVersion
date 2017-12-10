@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageView = findViewById(R.id.loadingimageview) ;
+
+        //MUST BE YOU HAVE TO USE GRADLE VERSION 27.0.0 BUT NOT 26.0.0 SERISE
         Glide.with(MainActivity.this).load(imagelink).apply(RequestOptions.placeholderOf(R.drawable.default_profile_pic).dontAnimate()).into(imageView);
     }
 }
